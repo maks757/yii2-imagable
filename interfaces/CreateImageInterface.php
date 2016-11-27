@@ -11,8 +11,7 @@ namespace bl\imagable\interfaces;
  */
 interface CreateImageInterface
 {
-
-    public function thumbnail($pathToImage, $width, $height, $data = []);
+    public function thumbnail($pathToImage, $width, $height);
 
     public function save($saveTo);
 }
