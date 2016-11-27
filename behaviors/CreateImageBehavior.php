@@ -121,7 +121,7 @@ class CreateImageBehavior extends Behavior
 
         foreach ($categorySizes as $sizeName => $size) {
             $image = "$imageName-$sizeName." . FileHelper::getFileType($path);
-            $this->imageCreator->thumbnail($path, $size['width'], $size['height']);
+            $this->imageCreator->thumbnail($path, $size['width'], $size['height'], $this->owner->dataProvider);
             $this->imageCreator->save(implode(DIRECTORY_SEPARATOR, [$newPath, $image]));
         }
 
