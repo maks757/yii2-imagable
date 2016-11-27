@@ -33,7 +33,7 @@ class CreateImageImagine extends Object implements CreateImageInterface
         $this->openImage->save($saveTo);
     }
 
-    public function thumbnail($pathToImage, $width, $height, $data = [])
+    public function thumbnail($pathToImage, $width, $height)
     {
         try {
             $this->openImage = $this->imagine->open(FileHelper::normalizePath($pathToImage))->thumbnail(new \Imagine\Image\Box($width,
