@@ -1,5 +1,5 @@
 {
-    "name": "black-lamp/yii2-imagable",
+    "name": "maks757/yii2-imagable",
     "description": "Image saving extension for yii2",
     "keywords": ["yii2", "image", "save", "thumbnail"],
     "type": "yii2-extension",
@@ -7,12 +7,16 @@
         {
             "name": "Ruslan Saiko",
             "email": "ruslan.saiko.dev@gmail.com"
+        },
+        {
+            "name": "Maxim Cherednyk",
+            "email": "maks757q@gmail.com"
         }
     ],
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/black-lamp/yii2-imagable"
+            "url": "https://github.com/maks757/yii2-imagable"
         }
     ],
     "require": {
@@ -24,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "bl\\imagable\\": ""
+            "maks757\\imagable\\": ""
         }
     }
 }
