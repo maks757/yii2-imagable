@@ -1,19 +1,19 @@
 #Instalation
 ```
-php composer.phar install black-lamp/yii2-imagable
+php composer.phar install maks757/yii2-imagable
 ```
 or add
 
 ```json
-"black-lamp/yii2-imagable": "*"
+"maks757/yii2-imagable": "*"
 ```
 to the `require` section of your composer.json.
 #Confiugation
 After extension is installed you need to setup imagable application component:
 ```php
 'imagable' => [
-    'class' => 'bl\imagable\Imagable',
-    'imageClass' => 'bl\imagable\instances\CreateImageImagine',
+    'class' => 'maks757\imagable\Imagable',
+    'imageClass' => 'maks757\imagable\instances\CreateImageImagine',
     'categories' => [
         'origin' => false,
         'category' => [
