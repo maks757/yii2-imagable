@@ -1,6 +1,7 @@
 <?php
-namespace bl\imagable\behaviors;
-use bl\imagable\BaseImagable;
+namespace maks757\imagable\behaviors;
+
+use maks757\imagable\BaseImagable;
 use yii\base\Behavior;
 use yii\base\Exception;
 

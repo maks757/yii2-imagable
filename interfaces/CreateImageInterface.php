@@ -1,6 +1,6 @@
 <?php
 
-namespace bl\imagable\interfaces;
+namespace maks757\imagable\interfaces;
 
 
 /**

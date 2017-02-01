@@ -1,6 +1,6 @@
 <?php
 
-namespace bl\imagable\name;
+namespace maks757\imagable\name;
 
 /**
  * Description of CRC32Name

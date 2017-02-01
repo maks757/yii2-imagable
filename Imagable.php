@@ -1,5 +1,5 @@
 <?php
-namespace bl\imagable;
+namespace maks757\imagable;
 
 /**
  * @inheritdoc

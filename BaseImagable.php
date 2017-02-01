@@ -1,8 +1,13 @@
 <?php
 
-namespace bl\imagable;
+namespace maks757\imagable;
 
-use bl\imagable\helpers\DirectoryHelper;
+use maks757\imagable\behaviors\CreateImageBehavior;
+use maks757\imagable\behaviors\DeleteImageBehavior;
+use maks757\imagable\behaviors\GetImageBehavior;
+use maks757\imagable\helpers\DirectoryHelper;
+use maks757\imagable\interfaces\CreateImageInterface;
+use maks757\imagable\name\BaseName;
 use yii\base\Component;
 
 /**
@@ -33,13 +38,13 @@ class BaseImagable extends Component
     {
         return [
             'getImage' => [
-                'class' => 'bl\imagable\behaviors\GetImageBehavior'
+                'class' => GetImageBehavior::className()
             ],
             'createImage' => [
-                'class' => 'bl\imagable\behaviors\CreateImageBehavior'
+                'class' => CreateImageBehavior::className()
             ],
             'deleteImage' => [
-                'class' => 'bl\imagable\behaviors\DeleteImageBehavior'
+                'class' => DeleteImageBehavior::className()
             ]
         ];
     }
@@ -73,12 +78,12 @@ class BaseImagable extends Component
 
     private function registerDependencies()
     {
-        \Yii::$container->set('bl\imagable\name\BaseName',
+        \Yii::$container->set(BaseName::className(),
             $this->nameClass);
 
-        \Yii::$container->set('name', 'bl\imagable\name\BaseName');
+        \Yii::$container->set('name', BaseName::className());
 
-        \Yii::$container->set('bl\imagable\interfaces\CreateImageInterface',
+        \Yii::$container->set(CreateImageInterface::class,
             $this->imageClass);
     }
 

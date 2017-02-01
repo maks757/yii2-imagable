@@ -1,9 +1,13 @@
 <?php
 
-namespace bl\imagable\instances;
+namespace maks757\imagable\instances;
 
-use bl\imagable\helpers\FileHelper;
-use bl\imagable\interfaces\CreateImageInterface;
+use Codeception\Util\Debug;
+use Imagine\Image\Box;
+use Imagine\Image\ManipulatorInterface;
+use Imagine\Imagick\Imagine;
+use maks757\imagable\helpers\FileHelper;
+use maks757\imagable\interfaces\CreateImageInterface;
 use yii\base\Object;
 use yii\imagine\Image;
 
@@ -13,18 +17,19 @@ use yii\imagine\Image;
  */
 class CreateImageImagine extends Object implements CreateImageInterface
 {
-
+    /**
+     * @var Imagine
+     */
     private $imagine;
 
     /**
-     *
-     * @var \Imagine\Image\ManipulatorInterface
+     * @var ManipulatorInterface
      */
     private $openImage = null;
 
     public function init()
     {
-        $this->imagine = new \Imagine\Imagick\Imagine();
+        $this->imagine = new Imagine();
         return parent::init();
     }
 
@@ -36,10 +41,10 @@ class CreateImageImagine extends Object implements CreateImageInterface
     public function thumbnail($pathToImage, $width, $height)
     {
         try {
-            $this->openImage = $this->imagine->open(FileHelper::normalizePath($pathToImage))->thumbnail(new \Imagine\Image\Box($width,
+            $this->openImage = $this->imagine->open(FileHelper::normalizePath($pathToImage))->thumbnail(new Box($width,
                 $height));
         } catch (\Exception $ex) {
-            \Codeception\Util\Debug::debug($ex->getMessage());
+            Debug::debug($ex->getMessage());
         }
     }
 }

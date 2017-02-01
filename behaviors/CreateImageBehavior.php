@@ -1,12 +1,12 @@
 <?php
 
-namespace bl\imagable\behaviors;
+namespace maks757\imagable\behaviors;
 
-use bl\imagable\BaseImagable;
-use bl\imagable\helpers\FileHelper;
-use bl\imagable\name\BaseName;
-use bl\imagable\helpers\DirectoryHelper;
-use bl\imagable\interfaces\CreateImageInterface;
+use maks757\imagable\BaseImagable;
+use maks757\imagable\helpers\DirectoryHelper;
+use maks757\imagable\helpers\FileHelper;
+use maks757\imagable\interfaces\CreateImageInterface;
+use maks757\imagable\name\BaseName;
 use yii\base\Behavior;
 use yii\base\Exception;
 
@@ -17,9 +17,6 @@ use yii\base\Exception;
  */
 class CreateImageBehavior extends Behavior
 {
-    /**
-     * @var BaseHashName
-     */
     private $name = null;
 
     /**

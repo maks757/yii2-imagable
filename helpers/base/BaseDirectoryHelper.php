@@ -1,6 +1,6 @@
 <?php
 
-namespace bl\imagable\helpers\base;
+namespace maks757\imagable\helpers\base;
 
 /**
  * BaseDirectoryHelper provides concrete implementation for [[DirectoryHelper]].

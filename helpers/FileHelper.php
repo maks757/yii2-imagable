@@ -1,9 +1,9 @@
 <?php
 
 
-namespace bl\imagable\helpers;
+namespace maks757\imagable\helpers;
 
-use bl\imagable\helpers\base\BaseFileHelper;
+use maks757\imagable\helpers\base\BaseFileHelper;
 
 /**
  * Description of ImageHelper

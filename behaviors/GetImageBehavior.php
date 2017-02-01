@@ -1,9 +1,9 @@
 <?php
 
-namespace bl\imagable\behaviors;
+namespace maks757\imagable\behaviors;
 
-use bl\imagable\BaseImagable;
-use bl\imagable\helpers\FileHelper;
+use maks757\imagable\BaseImagable;
+use maks757\imagable\helpers\FileHelper;
 use yii\base\Behavior;
 use yii\base\Exception;
 use yii\helpers\StringHelper;
